@@ -1,60 +1,65 @@
 ---
-description: How to install the plugin
+description: Инструкция о том, как установить плагин
 icon: circle-info
 ---
 
-# First Install
+# Первая установка
 
 {% hint style="danger" %}
-**Make sure** that all of your plugins and server software are up to date!\
-**Always check** the version of ItemsAdder you are downloading!
+**Убедитесь**, что ядро Вашего сервера и установленные плагины обновлены!\
+**Всегда обращайте внимание** на то, какую версию ItemsAdder Вы загружаете!
 
-* <mark style="color:red;">**v3 is only for 1.20.4 and lower**</mark>
-* <mark style="color:red;">**v4 is only for 1.20.6 and greater**</mark>
+* <mark style="color:red;">**v3 совместима только с версией 1.20.4 и ниже**</mark>
+* <mark style="color:red;">**v4 совместима только с версией 1.20.6 и выше**</mark>
 {% endhint %}
 
 {% stepper %}
 {% step %}
-#### Installing the plugin and libraries
+#### Шаг 1 - Установка плагина и библиотек
 
 <details>
 
-<summary>Click here to read v3 installation</summary>
+<summary>Если Вы устанавливаете плагин версии v3 - используйте эту инструкцию</summary>
 
-* Stop the server.
+* Остановите Ваш сервер.
 
-- Put **ProtocolLib** JAR inside the `plugins` folder
-  * Download 1.21.4 and older versions [here](https://github.com/dmulloy2/ProtocolLib/releases/)
+- Положите JAR-файл **ProtocolLib** в папку `plugins` Вашего сервера
+  * Загрузить для 1.21.4 и выше [можно тут](https://github.com/dmulloy2/ProtocolLib/releases/)
 
-* Put [**LoneLibs**](https://www.spigotmc.org/resources/lonelibs.75974/) JAR inside the `plugins` folder (not required on 4.0.9 and greater)
+* Положите JAR-файл [**LoneLibs**](https://www.spigotmc.org/resources/lonelibs.75974/) в папку `plugins` Вашего сервера (для версии 4.0.9 и выше необязательно)
 
-- Put the **ItemsAdder** JAR file inside your plugins folder
+- Положите JAR-файл **ItemsAdder** в папку `plugins` Вашего сервера
 
-* Start the server
+* Запустите Ваш сервер
 
-- Let **ItemsAdder** finish loading **everything**
+- Дайте время **ItemsAdder** на загрузку **ресурсов**
 
 </details>
 
-* Put `ProtocolLib.jar` inside the `plugins` folder (Download [here](https://github.com/dmulloy2/ProtocolLib/releases/download/dev-build/ProtocolLib.jar) )
-* Put the `ItemsAdder.jar` file inside the `plugins` folder
-* Start the server
-* Let **ItemsAdder** finish loading **everything**
+* Остановите Ваш сервер
+* Положите JAR-файл `ProtocolLib` в папку `plugins` Вашего сервера (Загрузить можно [тут](https://github.com/dmulloy2/ProtocolLib/releases/download/dev-build/ProtocolLib.jar) )
+* Положите JAR-файл `ItemsAdder.jar` в папку `plugins` Вашего сервера
+* Запустите Ваш сервер
+* Дайте время **ItemsAdder** на загрузку **ресурсов**
 {% endstep %}
 
 {% step %}
-#### Resourcepack first installation
+#### Шаг 2 - настройка пакета ресурсов
 
 {% hint style="warning" %}
-**Important Step**
+**Важно!**
 
-Content <mark style="color:red;">**WILL NOT SHOW CORRECTLY**</mark> if you won't complete this step!
+Без выполнения данного шага контент <mark style="color:red;">**НЕ БУДЕТ ОТОБРАЖАТЬСЯ КОРРЕКТНО**</mark>, Вы обязаны выполнить данный шаг!
 {% endhint %}
 
-Before using the plugin you have to decide the resourcepack hosting method.\
-Read [this tutorial](plugin-configuration/resourcepack-hosting) to decide the hosting method for the resourcepack.\
-The best method is `self-host`.
+Перед тем, как начать использовать плагин - Вам нужно определиться с медотом размещения пакета ресурсов для его последующей загрузки пользователями.\
+Прочтите [данную статью](plugin-configuration/resourcepack-hosting), чтобы выбрать подходящий Вам метод.\
+Лучшим методом является `self-host`.
 {% endstep %}
+
+{% step %}
+#### Ремендовано - установка ItemsAdderAdditions 
+00000000000000000000000000000000000000000000000000000000000000
 
 {% step %}
 #### (optional) Add official ItemsAdder custom content
