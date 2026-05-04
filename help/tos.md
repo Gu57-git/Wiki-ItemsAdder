@@ -2,94 +2,92 @@
 icon: circle-info
 ---
 
-# Terms Of Service
+# Условия предоставления услуг
 
-### How to ask for support
+### Поддержка
 
 {% embed url="https://forum.devs.beer/d/16-getting-support" %}
 
 {% hint style="danger" %}
-Before Buying Remember:
+Перед покупкой запомните:
 
-* ⛔ If you have another plugin that uses a custom resource pack you have to know how to merge it with the ItemsAdder resource pack or disable the other plugin. A tutorial is available [here](../adding-content/merge-resourcepacks.md).
-* ⛔ Before asking for support, please read the tutorials of this wiki.
-* ⛔ You must have some knowledge on how to create/manage/merge vanilla Minecraft resource packs as this plugin uses a custom-made and modified resource pack to show custom textures/models.\
-  Please if you have no knowledge about resource packs don't buy the plugin!
-* ⛔ It's impossible to write a complete list of compatible/incompatible plugins without testing every single plugin on the planet. If the plugin doesn't work with your server setup don't ask for a refund but [report it](tos.md#bugs--issues--support) and I'll try to find a solution.
-* ⛔ [Not compatible with some plugins](https://itemsadder.devs.beer/compatibility-with-other-plugins/not-compatible)
+* ⛔ Если у Вас уже имеется иной сторонний плагин, который использует свою систему пакетов ресурсов - Вы должны объединить данный пакет с пакетом ItemsAdder или, отключить сторонний плагин. Подробнее о слиянии можно прочитать [тут](../adding-content/merge-resourcepacks.md).
+* ⛔ Перед тем как запрашивать поддержку или задать любой вопрос - пожалуйста, прочтите инструкции в данной вики.
+* ⛔ У Вас должно быть хотя бы минимальное понимание того, как создавать/управлять/объединять ванильные пакеты ресурсов Minecraft, так как плагин использует и генерирует модифицированный пакет ресурсов для отображения новых текстур/моделей. Пожалуйста, если Вы не имеете ни малейшего понятия о их устройстве и не собираетесь в этом разбираться - воздержитесь от покупки ItemsAdder.   
+* ⛔ К сожалению невозможно знать и расписать полный список всех совместимых/несовместимых плагинов без ручного тестирования каждого плагина на планете. Если ItemsAdder не работает на Вашей серверной сборке - не запрашивайте возврат средств, а [сообщите о проблеме](tos.md#bugs--issues--support), я постараюсь найти её решение.
+* ⛔ [Список известных несовместимых плагинов](https://itemsadder.devs.beer/compatibility-with-other-plugins/not-compatible)
 {% endhint %}
 
-### Refund policy
+### Политика возврата средств
 
-Refunds are typically at the seller's discretion¹ and might be issued on particular cases.\
-Contact the seller using the Discord or via email before opening an official dispute on the payment platform (PayPal, Stripe, etc.).
+Возврат денежных средств, как правило, осуществляется по усмотрению продавца¹ и может производиться не во всех случаях.\
+Прежде чем открыть официальный спор на самой платежной платформе, свяжитесь с продавцом через Discord или по электронной почте (платежные платформы, такие как PayPal, Stripe, иные.).
 
-¹Except as required by applicable state law.
+¹За исключением случаев, когда это требуется в соответствии с действующим законодательством.
 
-### Resource Pack
+### Пакет ресурсов
 
-This plugin **requires** your **users** to **download** a **resource pack** (which is sent automatically on join) one time.\
-This Plugin may not work with plugins that are using server texture packs, [read this to see if your plugin is compatible](../compatibility-with-other-plugins).\
-There is no Minecraft plugin which allows you to load custom assets without resource packs, it's not an ItemsAdder limitation, that's how the game works.
+Данный плагин **обязует** Ваших **игроков** к **загрузке** отдельного **пакета ресурсов** (который отправляется автоматически) единовременно (Если он не обновлялся Вами с момента последней загрузки игроком).\
+Чаще всего данный плагин может быть несовместим с плагинами, которые тоже используют серверный пакет ресурсов, [ознакомьтесь с данной статьей, чтобы убедиться в совместимости](../compatibility-with-other-plugins).\
+Не существует Minecraft-плагинов, которые позволят Вам отображать новые ресурсы без пакета ресурсов, это является ограничением самой игры, а не ItemsAdder, так она работает.
 
-### Server Software
+### Серверное программное обеспечение (серверное ядро)
 
-This plugin works with Spigot and Paper, I can't guarantee that the plugin will work on other Spigot forks.\
-By using other server software solutions you agree that the plugin may not work correctly.
+Данный плагин работает на серверном программаном обеспечении (ядрах) Spigot и Paper, к сожалению я не могу гарантировать, что плагин будет работать идеально и стабильно на любых ответвлениях Spigot (так называемые "fork").\
+Используя иное серверное программное обеспечение (серверное ядро) Вы добровольно соглашаетесь, что плагин может работать некорректно, как частично, так и полностью.
 
-### **Plugin Ownership**
+### **Владение**
 
-DO NOT DECOMPILE, RESELL, CRACK, OR REDISTRIBUTE THE PLUGIN.
+НЕ ДЕКОМПИЛИРУЙТЕ, ПЕРЕПРОДАВАЙТЕ, ВЗЛАМЫВАЙТЕ ИЛИ РАСПРОСТРАНЯЙТЕ КОПИЮ ПЛАГИНА.
 
-You may **only use** the **plugin** on a **server** that **you are** an **owner** of.\
-Bungeecord networks are also allowed.\
-You Must ensure that your staff won't leak the plugin and keep your JAR safe.\
+Вы **должны** использовать **плагин** только на своих **серверах и проектах**, **владельцем** которого **Вы являетесь**.\
+Использование плагина на нескольких серверах в сети Bungeecord разрешается.\
+Вы должны быть уверены, что Ваши сотрудники или сооснователи не допустят утечки Вашей копии плагина и обеспечат его безопасность.\
 \
-If you want to transfer your account or your license to another account you have to provide a valid explanation about why, by opening a ticket on the Discord server.
+Если Вы хотите передать лицензию на свою копию другой учетной записи - Вы можете создать заявку в Discord-сервере с подробным объяснением веской причины.
 
-### Bugs & Issues & Support
+### Недоработки, проблемы и поддержка
 
-If you have any problems **do not leave one-star review** to gain my attention, it does the opposite.\
-I can fix bugs only if you report them in the right place.\
-Please be sure to read tutorials before asking for help.\
-Check the [FAQ](https://itemsadder.devs.beer/faq) for more info.\
-If you are contacting support please read the support policy.
+Если Вы столкнулись с любой проблемой - **не ставьте низкие оценки плагину** чтобы привлечь мое внимание, эффект будет противоположным.\
+Я могу исправить ошибки и проблемы только в случае, если Вы сообщили о них в правильном месте.\
+Перед публикацией повторно убедитесь в наличии проблемы и прочтите инструкции.\
+Прочтите [FAQ](https://itemsadder.devs.beer/faq), чтобы получить больше информации.\
+Если вы обращаетесь в службу поддержки, пожалуйста, ознакомьтесь с разделом политики поддержки.
 
-### Updates
+### Обновления
 
-Once your purchase has been approved, you will be able to download this resource. You are only guaranteed to be able to download this resource, as is, once. No additional downloads or updates are guaranteed.
+После успешной оплаты Вы сможете загрузить данный ресурс. Вы получаете гарантию на единовременную загрузку только данного ресурса, в его неизмененном виде только на данный момент. Дополнительные загрузки или обновления не гарантированы.
 
-## 🆘 Support Policy
+## 🆘 Политика поддержки
 
-#### No support for unverified accounts
+#### Поддержка не предоставляется неверифицированным пользователям
 
-All users must complete the verification process to ask for support.
+Все пользователи должны завершить процесс верификации в месте, где они контактируют с поддержкой для запроса помощи.
 
-#### No support in case of support abuse
+#### Поддержка не предоставляется в случае злоупотребления поддержкой
 
-You are not allowed to open tickets or spam threads or tag the support team.\
-Any user that will spam support will be ignored.
+Запрещается открывать множественные заявки в службу поддержки, засорять список тем или отмечать (тегать, пинговать) сотрудников поддержки.\
+В случае, если это происходит - сотрудники поддержки в праве игнорировать Ваш вопрос и не оказывать помощи.
 
-#### No support if not enough information is provided
+#### Поддержка не предоставляется, если Вы не предоставили достаточно информации
 
-It's your responsibility to give us all the information that is related to your issues.\
-We can't provide support if you won't give us any information.\
-You won't get support if your help request doesn't have enough information.
+Обязанность в предоставлении максимального количества информации по Вашей проблеме лежит полностью на Вас.\
+Мы не можем и не будем помогать Вам, если Вы отказываетесь или не хотите предоставлять информацию.\
+Ваша проблема останется неразрешенной и оказать Вам поддержку будет невозможно, если информация не будет предоставлена вовремя в необходимом количестве.
 
-## 🖌 ️Addon Creation Policy
+## 🖌 ️Политика создания дополнений
 
-You can sell **custom packs, textures, and configs...** compatible with this plugin or plugin presets.\
-[A donation ](http://a.devs.beer/lonedevdonate)is appreciated if you earn a lot from them.\
-Make sure to read the [addons creation policy](tos.md#-addon-creation-policy).
+Вы можете продавать **свои пакеты, текстуры, или настройки...**, совместимые с данным плагином.\
+[Пожертвования ](http://a.devs.beer/lonedevdonate) приветствуются, если Вы получаете значительную прибыль от них.\
 
-### Creating unique Addons
+### Создание уникальных дополнений
 
-When creating add-ons you are not allowed to include any items from the default **ItemsAdder** pack\
-DO NOT INCLUDE MY DEFAULT ITEMS, MODELS, FONT IMAGES etc. IN YOUR ADDONS OR PACKS!\
-You can't resell my assets.
+Создавая дополнение (аддон) Вы не можете использовать любые предметы из основного пакета **ItemsAdder**\
+НЕ ВСТАВЛЯЙТЕ МОИ ПРЕДМЕТЫ, МОДЕЛИ, ТЕКСТОВЫЕ ИЗОБРАЖЕНИЯ и так далее В ВАШИ ДОПОЛНЕНИЯ И ПРОДАВАЕМЫЕ ПАКЕТЫ!\
+Вы не можете перепродавать то, что Вам не пренадлежит.
 
-### Copying Other's Addons
+### Копирование и плагиат чужих дополнений
 
-If your addon contains similar models, items, font images etc. to another addon your addon will be removed.\
-DON'T COPY OTHER CREATIONS.\
-Ask permission if you really want to use them, the creator might allow you.
+Если Ваше дополнение (аддон) имеет похожие модели, предметы, текстовые изображения и так далее, которые имеет другое дополнение - Ваше будет удалено.\
+НЕ КОПИРУЙТЕ ЧУЖИЕ ТВОРЕНИЯ.\
+Копирование или прямое использование чужого ресурса разрешено ТОЛЬКО в случае, если у Вас есть официальное разрешение от его владельца.
