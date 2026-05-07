@@ -2,23 +2,23 @@
 icon: file-png
 ---
 
-# Block Icon 2D
+# 2D-иконка блока
 
 {% hint style="warning" %}
-This is to support clients older than 1.21.2.\
-Minecraft 1.21.2 now supports 2D icons directly.
+Данная функция доступна с версии игры 1.21.2.\
+В Minecraft 1.21.2 введена поддержка 2D-иконок напрямую.
 
 Refer to the [modern tutorial here](../items/item-properties/2d-icon.md).
 {% endhint %}
 
 {% embed url="https://youtu.be/FOLoAAjV_oI" %}
 
-### Step 1
+### Шаг 1
 
-Create the 2D icon for the block.
+Создание самой 2D-иконки для блока.
 
 {% hint style="info" %}
-Replace `myitems` with your [namespace](../../plugin-usage/beginners/configs-and-resourcepack.md#what-is-a-namespace)!
+Замените `myitems` своей [папкой](../../plugin-usage/beginners/configs-and-resourcepack.md#what-is-a-namespace)!
 {% endhint %}
 
 ```yaml
@@ -49,11 +49,11 @@ items:
             decrement_amount: true
 ```
 
-Now create the `rocks.png` file inside the folder `contents\myitems\resourcepack\myitems\textures\item`.
+Теперь создайте текстуру `rocks.png` внутри папки `contents\myitems\resourcepack\myitems\textures\item`.
 
-### Step 2
+### Шаг 2
 
-Create the item which shows the placed rock model. It is a different item form the one you see in the inventory (the one created in the **step 1**).
+Создание самого блока, который будет размещаться предыдущим (который был создан в **шаге 1**).
 
 ```yaml
 info:
@@ -79,7 +79,8 @@ items:
         break:
           drop_item:
             item: rocks
-  rocks:
+
+  rocks:                                #    <--- шаг 1
     display_name: Rocks
     permission: blocks.rocks
     lore:
@@ -103,8 +104,8 @@ items:
             decrement_amount: true
 ```
 
-Now create the `placed_rocks.json` file inside the folder `contents\myitems\resourcepack\myitems\models\block\`.
+Теперь создайте 3D-модель `placed_rocks.json` и поместите ее в `contents\myitems\resourcepack\myitems\models\block\`.
 
-### Done!
+### Готово!
 
-Now try to right click with the `rocks` item and you will see it places the `rocks_placed` model.
+Теперь попробуйте разместить предмет `rocks`, он разместит модель предмета `rocks_placed`.
