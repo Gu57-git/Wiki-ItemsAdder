@@ -2,12 +2,12 @@
 icon: cube
 ---
 
-# Block
+# Блоки
 
-## Block properties
+## Настройки блока
 
 ```yaml
-specific_properties:
+behaviours:
   block:
     placed_model:
       type: REAL_NOTE
@@ -44,62 +44,62 @@ specific_properties:
 
 ### `type`
 
-This property can have these value:
+Данная настройка может иметь следующие значения:
 
 * `REAL_NOTE`
-  * Uses a real block (note\_block), no lag, no entities, 100% real blocks.
-  * Downsides:
-    * **no** support for **transparency**.
-    * **Max** of **750 blocks** in total.
+  * Использует настоящий полный блок (нотный блок), без нагрузки, без сущностей, 100% настоящий блок.
+  * Минусы:
+    * **не** поддерживают **прозрачность**.
+    * **Лимит** в **750 блоков** в сумме.
 * `REAL`
-  * Uses a real block (mushroom), no lag, no entities, 100% real blocks. (although it's advised to use `REAL_NOTE` which is more stable).
-  * Downsides:
-    * **Max** of **191 blocks** in total
+  * Использует настоящий полный блок (блоки грибов), без нагрузки, без сущностей, 100% настоящий блок. (рекомендуется использовать `REAL_NOTE` вместо данного типа по причине стабильности).
+  * Минусы:
+    * **Лимит** в **191 блок** в сумме.
 * `REAL_TRANSPARENT`
-  * Uses a real block (chorus), no lag, no entities, 100% real blocks, also with transparency support!
-  * Downsides:
-    * **Max** of **63 blocks** in total.
+  * Использует настоящий неполный блок (стебли хоруса), без нагрузки, без сущностей, 100% настоящий блок, но с поддержкой прозрачности.
+  * Минусы:
+    * **Лимит** в **63 блока** в сумме.
 * `REAL_WIRE`
-  * Uses a real block (tripwire), no lag, no entities, 100% real blocks.
-  * Downsides:
-    * **Max** of **127 blocks** in total.
+  * Использует настоящий сквозной (можно проходить сквозь) блок (блок нити), без нагрузки, без сущностей, 100% настоящий блок, поддерживает прозрачность.
+  * Минусы:
+    * **Лимит** в **127 блоков** в сумме.
 * `TILE`
-  * Uses **tile** blocks (modified **spawner** with custom skin). It's **not an entity** but it have some downsides. Good thing is that you can create **infinite blocks**, there is no amount limit like **REAL** blocks.
-  * Downsides:
-    * Not a 100% real block, it's a retextured spawner.
-    * Texture/model vanishes on high distance, so it will reveal the spawner vanilla texture.
-    * It could cause clientside lag if A LOT of blocks are in the player field of view, but only on lowend PCs.
+  * Использует **тайловый** блок (модифицированный **спавнер** с текстурой). Это **не сущность**, но имеет свои минусы. Из плюсов - можно создавать **неограниченное количество**, лимит, как у блоков **REAL** - отсутствует.
+  * Минусы:
+    * Не 100% настроящий блок, это спавнер с текстурой.
+    * Текстура/модель внутри спавнера пропадает при большом отдалении от блока, блок отображается как обычный спавнер.
+    * В больших количествах способен вызвать понижение FPS у игрока, но в основном на дешевом железе.
 * `FIRE`
-  * This is a **special** type of **block**, it's the **fire** block.
-  * Downsides:
-    * Only a **max** of **14** custom **fires** are possible, so be sure to create only the ones you need.
+  * Это **специфичный** тип **блоков**, использующий состояния блоков **огня** для создания нового типа самого огня.
+  * Минусы:
+    * **Лимит** в всего лишь **14** блоков своего **огня**, убедитесь, что создаете нужный Вам.
 
 {% hint style="warning" %}
-- **`REAL`** and **`REAL_NOTE`** are meant to be used for decorative blocks and ores.
-- **`TILE`** blocks for trade machines and machinery/rare decorative blocks.\
-  You should not use **`TILE`** blocks for ores because _**it may**_ cause a bit of lag on chunk generation. They are not adviced to be used for [populators](../world-generation/trees-populators.md) or [decorators](../world-generation/cave-decorators.md).
+- **`REAL`** и **`REAL_NOTE`** предназначены для полных декоративных блоков и для руды.
+- **`TILE`** предназначены для редкого использования или для использования как инструмент администратора, чтобы экономить слоты **`REAL`** и **`REAL_NOTE`**.\
+  Вы должны НЕ использовать **`TILE`** блоки для руды, потому что _**они могут**_ вызывать понижение производительности при прогрузке и создании чанков. Также мы не рекомендуем использовать их в [деревьях и их популяции](../world-generation/trees-populators.md) или в [популяции в пещерах](../world-generation/cave-decorators.md).
 {% endhint %}
 
-### `rotx` and `roty`
+### `rotx` и `roty`
 
-This allows you to specify a rotation for a particular model. This is an option for expert users.\
-The specified rotation is STATIC, it's not dynamic. This is useful only if you want to create multiple variants of the same block without having to create a separate model manually.
+Данная функция позволяет задать поворот модели блока. В основном используется продвинутыми пользователями.\
+Заданный поворот СТАТИЧЕН, он не является динамическим. Эта функция используется в случае, если Вы хотите создать вариации блока, не создавая отдельную модель вручную.
 
 ### `placeable_on_water`
 
-This allows to make some blocks placeable directly on **water** surface.
+Функция, позволяющая размещать блок прямо на поверхности **воды**.
 
 ### **`placeable_on_lava`**
 
-This allows to make some blocks placeable directly on **lava** surface.
+Функция, позволяющая размещать блок прямо на поверхности **лавы**.
 
 ### `placeable_on_other_real_wire`
 
-Set if the `REAL_WIRE` block can be placed on other `REAL_WIRE` blocks or not.
+Задайте, если хотите, чтобы блок `REAL_WIRE` мог быть размещен на другом блоке `REAL_WIRE`.
 
 ### `shift_up`
 
-This allows to make some blocks placed 1 block up. This is useful for `REAL_WIRE` blocks to create tall plants.
+Функция, позволяющая размещать блок на 1 блок выше. Используется для блоков `REAL_WIRE`, чтобы создать высокие растения.
 
 ### `custom_variants`
 
@@ -110,84 +110,85 @@ This allows to make some blocks placed 1 block up. This is useful for `REAL_WIRE
 ### `drop_when_mined`
 
 {% hint style="warning" %}
-Available since ItemsAdder 4.0.9.
+Доступно с версии ItemsAdder 4.0.9.
 
-Older versions use `cancel_drop` with inverted `true/false`.
+Старые версии используют параметр `cancel_drop` с инвертированными значениями `true/false`.
 {% endhint %}
 
-Controls if the block is dropped when mined. Useful if you have any mineral that will drop out of the block (loots), to avoid exploits.
+Контралирует выпадение самого блока при его разрушении. Используется для создания блоков, из которых выпадают иные предметы или минералы, а не сам блок (регулируется параметрами Добычи ("loots")).
 
 ### `drop_on_shears`
 
 {% hint style="warning" %}
-Available since ItemsAdder 4.0.9.
+Доступно с версии ItemsAdder 4.0.9.
 {% endhint %}
 
-Controls if the block is dropped when using shears.
+Контралирует выпадение блока при разрушении ножницами.
 
 ### `drop_on_silk_touch`
 
 {% hint style="warning" %}
-Available since ItemsAdder 4.0.9.
+Доступно с версии ItemsAdder 4.0.9.
 {% endhint %}
 
-Controls if the block is dropped when using silk touch enchanted tools.
+Контралирует выпадение блока при разрушении инструментами с зачарованием "Шелковое касание".
 
 {% hint style="info" %}
-If you use silk touch enchanted tool to break the block you will still get the block but it won't drop any item from its loot
+Важно, если Вы используете инструмент с зачарованием "шелковое касание" при разрушении блока - Вы получите блок, но опции, заданные в параметрах Добычи ("loots"), будут проигнорированы.
 {% endhint %}
 
 ## Tools blacklist and whitelist
 
-You can set "\_PICKAXE" so every pickaxe will match the list rule, also "\_AXE" as the plugin checks if the material name contains the word you set in the rule.\
-It also works for custom items ids, so for example if you set "ruby\_" every ruby tool will work (ruby\_pickaxe, ruby\_axe...)
+Позволяет запретить или разрешить разрушение блока указанными инструментами.
+Вы можете указать "\_PICKAXE", тогда каждый предмет, имеющий суффикс кирки будет добавлен в список, то же самое актуально для "\_AXE" (топора) и иных инструментов, плагин проверит наименования самостоятельно.\
+Это так же работает и для ID предметов ItemsAdder, например, если Вы указали "ruby\_", то все инструменты из рубинов (которые имеют префикс "ruby\_") будет учитываться - (ruby\_pickaxe, ruby\_axe...)
 
 ### `break_tools_blacklist`
 
-Blacklist of tools that cannot break this block.
+Запрещает использовать предмет(ы) для разрушения данного блока.
 
 ### `break_tools_whitelist`
 
-Whitelist of tools that can break this block.
+Разрешает использовать предмет(ы) для разрушения данного блока.
 
 ### `events_tools_blacklist`
 
-Blacklist of tools that cannot run events on this block[ (`placed_block.interact`)](../items/item-properties/events/events-list.md)
+Запрещает запуск событий предмета для данного блока [ (`placed_block.interact`)](../items/item-properties/events/events-list.md)
 
 ### `events_tools_whitelist`
 
-Whitelist of tools that can run events on this block [(`placed_block.interact`)](../items/item-properties/events/events-list.md)
+Разрешает запуск событий предмета для данного блока [(`placed_block.interact`)](../items/item-properties/events/events-list.md)
 
-## Other options
+## Прочие параметры
 
 ### `hardness`
 
-Hardness of the block, it makes it more difficult to be mined.\
-Refer to my blocks to get some **examples** (check **blocks.yml** file inside **itemsadder namespace**).
+Hardness - параметр блока, отвечающий за его скорость разрушения.\
+Важно, значение задается НЕ в тиках (в основном используется диапозон от 1 до 10), ориентируйтесь на **примеры** в официальном пакете ItemsAdder (файлы **blocks.yml**).
 
-You can set `hardness` to `-1` to make the block break instantly.
+Вы можете задать в параметр `hardness` значение `-1`, чтобы блок ломался мгновенно.
 
 ### `blast_resistance`
 
-Explosion resistance (by default is `hardness * 3`).
+Сопротивление взрывам (По умолчанию значение просчитывается по формуле: `hardness * 3`).
 
 ### `no_explosion`
 
-Totally immune from explosions, ignoring `blast_resistance`.
+Абсолютный иммунитет к взрывам, игнорирует опцию `blast_resistance`, даже если та установлена.
 
 ### `sounds`
 
-You can specify [custom sound](../adding-sounds.md) names instead of vanilla sound.\
-You can specify both [Spigot sounds](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html) or vanilla [Minecraft sounds](https://www.digminecraft.com/lists/sound_list_pc.php) names.
+Вы можете задавать наименования [своих звуков](../adding-sounds.md), вместо использования ванильных.\
+Вы можете использовать значения обоих форматов, как [формат Spigot](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html) так и [формат Minecraft](https://www.digminecraft.com/lists/sound_list_pc.php).
 
 {% hint style="info" %}
-**Stone** block sounds will be used if no sound is specified.
+Если значения не заданы, по умолчанию будут заданы значения блока **камня**.
 {% endhint %}
 
-#### Example using vanilla sounds
+#### Пример использования ванильный звуков
 
 ```yaml
-    specific_properties:
+    behaviours:
       block:
         placed_model:
           type: REAL_NOTE
@@ -209,7 +210,7 @@ You can specify both [Spigot sounds](https://hub.spigotmc.org/javadocs/spigot/or
 
 ```
 
-#### Example using custom sounds
+#### Пример использования своих звуков
 
 ```yaml
     sound:
@@ -226,14 +227,14 @@ You can specify both [Spigot sounds](https://hub.spigotmc.org/javadocs/spigot/or
 ```
 
 {% hint style="info" %}
-To add custom sounds to your resourcepack you have to [read the sounds tutorial](../adding-sounds.md).
+Чтобы добавить свои звуки - [следуйте данной инструкции](../adding-sounds.md).
 {% endhint %}
 
 ### `permission_suffix`
 
-This property allows you to enable permissions for the block place and block break events.\
-This setting is not specified by default because we want players to be able to break and place blocks freely.\
-Players would need explicit permissions if you specify these properties:
+Позволяет задать права на установку и разрушение данного блока.\
+По умолчанию блок не имеет заданных прав, потому игрок свободно может ломать и ставить блок.\
+Игроку нужно будет выдать права на разрушение и установку блока, если Вы зададите следующие параметры:
 
 * `ia.user.block.break.iasurvival.ruby_ore`
 * `ia.user.block.place.iasurvival.ruby_ore`
@@ -251,7 +252,7 @@ items:
       generate: true
       textures:
         - block/ores/ruby_ore
-    specific_properties:
+    behaviours:
       block:
         permission_suffix:
           break: iasurvival.ruby_ore
@@ -295,7 +296,7 @@ This has a downside, you can only set the experience drop to custom blocks, not 
       generate: true
       textures:
       - block/ruby_block.png
-    specific_properties:
+    behaviours:
       block:
         placed_model:
           type: REAL_NOTE
