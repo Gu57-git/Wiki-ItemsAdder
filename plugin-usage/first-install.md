@@ -58,32 +58,41 @@ icon: circle-info
 {% endstep %}
 
 {% step %}
-#### Ремендовано - установка ItemsAdderAdditions 
-00000000000000000000000000000000000000000000000000000000000000
+#### (рекомендуется) Установка дополнения ItemsAdderAdditions
+
+**ItemsAdderAdditions** - плагин, добавляющий дополнительный функционал, поведение предметов и их действия.
+Загрузить - [Modrinth](https://modrinth.com/plugin/itemsadderadditions) | [SpigotMC](https://www.spigotmc.org/resources/itemsadderadditions.133918/)
+
+{% endstep %}
 
 {% step %}
-#### (optional) Add official ItemsAdder custom content
+#### (необязательно) Официальный пакет ItemsAdder
 
 ![](../.gitbook/assets/items_showcase_gif.apng)
 
-**ItemsAdder** comes with a lot of custom content already created for you.\
-It's not automatically included in the downloaded plugin because some people might not want every item/feature automatically added into their server.
+Инструмент **ItemsAdder** предоставляет уже готовый пакет ресурсов с обширным количеством контента для Вас.\
+Пакет не устанавливается автоматически по причине, что большинство пользователей предпочитает использовать ItemsAdder только для своего контента на своем сервере.
+**Рекомендуем** ознакомиться с данным пакетом, даже если Вы не планируете его устанавливать, так как он содержит большое количество готовых примеров настройки.
 
 {% embed url="https://github.com/ItemsAdder/DefaultPack/releases" %}
 
 <div align="left"><figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure></div>
 
-* Extract the content into the `ItemsAdder` folder and overwrite the files if asked.
-* Run the `/iazip` command.
-* Follow your [hosting method](plugin-configuration/resourcepack-hosting) if you're not using **self-host**.
+* Распакуйте архив в папку  `ItemsAdder` с заменой.
+* Используйте команду `/iazip`.
+* Следуйте инструкции своего [метода размещения](plugin-configuration/resourcepack-hosting) пакета ресурсов, если Вы решили не использовать **self-host**.
 {% endstep %}
 
 {% step %}
-#### (optional) Add other ItemsAdder custom content
+#### (необязательно) Дополнение к официальному пакету ItemsAdder
 
-**Download the Other Packs here:**
+**Загрузить:**
 
 {% embed url="https://github.com/ItemsAdder/OtherPacks/releases/latest" %}
+
+<div align="left"><img src="../.gitbook/assets/image (94).png" alt=""></div>
+{% endstep %}
+{% endstepper %}
 
 <div align="left"><img src="../.gitbook/assets/image (94).png" alt=""></div>
 {% endstep %}
