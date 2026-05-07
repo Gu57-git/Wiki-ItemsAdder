@@ -2,28 +2,28 @@
 icon: ban
 ---
 
-# Enable/Disable custom blocks in worlds
+# Включение/выключение в определенных мирах
 
-You can disable custom blocks in some worlds, this will stop the plugin from generating custom region files.
+Вы можете отключить новые блоки в указанных мирах, плагин перестанет генерировать свои файлы регионов в папке мира.
 
-By default the custom blocks are enabled in all worlds.
+По умолчанию новые блоки включены во всех мирах.
 
-## All Rules
+## Все возможные правила
 
 {% code title="config.yml" %}
 ```yaml
 blocks:
   worlds:
-    - "*" # Enable in all worlds
-    - "world_*" # Enable in worlds starting by `world_`
-    - "*_nether" # Enable in worlds ending by `_nether`
-    - "!my_custom_world" # Disable in world named `my_custom_world`
+    - "*" # Включить во всех мирах
+    - "world_*" # Включить в мирах, которые начинаются с `world_`
+    - "*_nether" # Включить в мирах, которые заканчиваются на `_nether`
+    - "!my_custom_world" # Отключить в мире `my_custom_world`  (отключить, так как стоит знак ! перед наименованием мира)
 ```
 {% endcode %}
 
-## Examples
+## Примеры
 
-### Enable in all worlds
+### Включен во всех мирах
 
 {% code title="config.yml" %}
 ```yaml
@@ -33,7 +33,7 @@ blocks:
 ```
 {% endcode %}
 
-### Enable in all worlds but not in nether world
+### Включен во всех мирах, кроме Nether
 
 {% code title="config.yml" %}
 ```yaml
