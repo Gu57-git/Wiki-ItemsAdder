@@ -234,10 +234,12 @@ Hardness - параметр блока, отвечающий за его ско�
 
 Позволяет задать права на установку и разрушение данного блока.\
 По умолчанию блок не имеет заданных прав, потому игрок свободно может ломать и ставить блок.\
-Игроку нужно будет выдать права на разрушение и установку блока, если Вы зададите следующие параметры:
+Игроку нужно будет выдать следующие права на разрушение и установку блока: 
 
 * `ia.user.block.break.iasurvival.ruby_ore`
 * `ia.user.block.place.iasurvival.ruby_ore`
+
+если Вы зададите следующие параметры:
 
 ```yaml
 info:
@@ -246,7 +248,7 @@ items:
   ruby_ore:
     enabled: true
     display_name: display-name-ruby_ore
-    permission: iasurvival.items.ruby_ore
+    permission: iasurvival.items.ruby_ore              # <---
     resource:
       material: PAPER
       generate: true
@@ -271,21 +273,15 @@ items:
           - _hammer
 ```
 
-### Use the official files editor to read all the properties
-
-{% content-ref url="../beginners/files-editor.md" %}
-[files-editor.md](../../plugin-usage/beginners/files-editor.md)
-{% endcontent-ref %}
-
-## Drop experience from block
+## Опыт из блоков
 
 {% hint style="info" %}
-**There are 2 ways to drop** experience **from your custom blocks.**
+**Есть 2 возможных пути выдачи опыта** из **вашего блока.**
 {% endhint %}
 
-### 1. Add the experience drop directly in the custom block creation
+### 1. Добавление выпадения опыта напрямую в опции Вашего блока
 
-This has a downside, you can only set the experience drop to custom blocks, not to vanilla blocks.
+Из минусов - Вы можете задать выпадение только для своих блоков, без возможности задать это для ванильных.
 
 ```yaml
   ruby_block:
@@ -313,9 +309,9 @@ This has a downside, you can only set the experience drop to custom blocks, not 
             max_amount: 3
 ```
 
-### 2. Add the exp drop to loots
+### 2. Добавление выпадения опыта через параметры добычи ("loots")
 
-This is the best way because you can also apply this to vanilla blocks types and you can add as many as exp settings you want. This allows you to add more randomness and dynamicity to your drops.
+Это является лучшим решением, так как Вы разделяете конфигурацию самого блока и его добычу, в дополнение Вы можете добавить выпадение опыта для ванильных блоков и задать отдельный параметр шанса для большей гибкости.
 
 ```yaml
 loots:
@@ -334,3 +330,10 @@ loots:
           max_amount: 3
           chance: 100
 ```
+
+
+### Используйте официальный редактор файлов, чтобы просмотреть все возможные опции 
+
+{% content-ref url="../beginners/files-editor.md" %}
+[files-editor.md](../../plugin-usage/beginners/files-editor.md)
+{% endcontent-ref %}
